@@ -5,6 +5,8 @@ import com.atguigu.commonutils.R;
 import com.atguigu.educms.entity.CrmBanner;
 import com.atguigu.educms.service.BannerAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -26,7 +28,7 @@ public class BannerAdminController {
     @GetMapping("pageBanner/{page}/{limit}")
     public R pageBanner(@PathVariable long page, @PathVariable long limit){
         Map bannerMap=bannerAdminService.pageView(page,limit);
-        return R.ok().data("bannerList",bannerMap);
+        return R.ok().data(bannerMap);
     }
 
     @PostMapping("addBanner")
@@ -36,12 +38,14 @@ public class BannerAdminController {
     }
 
     @PutMapping("update")
+    @CacheEvict(value="banner",allEntries = true)
     public R updateBanner(@RequestBody CrmBanner crmBanner){
         bannerAdminService.updateById(crmBanner);
         return R.ok();
     }
 
     @DeleteMapping("delete/{id}")
+    @CacheEvict(value="banner",allEntries = true)
     public R deleteBanner(@PathVariable String id){
         bannerAdminService.removeById(id);
         return R.ok();

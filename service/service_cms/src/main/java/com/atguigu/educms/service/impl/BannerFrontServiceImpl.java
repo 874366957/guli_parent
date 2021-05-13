@@ -10,6 +10,7 @@ import com.atguigu.eduservice.service.EduTeacherService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +29,8 @@ public class BannerFrontServiceImpl extends ServiceImpl<CrmBannerMapper, CrmBann
     private EduTeacherService eduTeacherService;
     @Autowired
     private EduCourseService eduCourseService;
+
+    @Cacheable(value = "banner",key = "'selectIndexList'")
     @Override
     public List selectAll() {
         List<CrmBanner> banners = baseMapper.selectList(null);
@@ -51,6 +54,7 @@ public class BannerFrontServiceImpl extends ServiceImpl<CrmBannerMapper, CrmBann
         List<EduTeacher> list=eduTeacherService.list(teacherQueryWrapper);
         return list;
     }
+    @Override
     public List<CrmBanner> selectAllBanner(){
         QueryWrapper<CrmBanner> wrapper=new QueryWrapper<>();
         wrapper.orderByDesc("id");
