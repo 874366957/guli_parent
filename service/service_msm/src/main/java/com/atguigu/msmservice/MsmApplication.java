@@ -1,4 +1,4 @@
-package com.atguigu.eduservice;
+package com.atguigu.msmservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,9 +11,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableDiscoveryClient
 @EnableFeignClients
-@ComponentScan(basePackages = {"com.atguigu"})
-public class EduApplication {
+@ComponentScan("com.atguigu")
+public class MsmApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EduApplication.class);
+        SpringApplication.run(MsmApplication.class);
     }
 }
