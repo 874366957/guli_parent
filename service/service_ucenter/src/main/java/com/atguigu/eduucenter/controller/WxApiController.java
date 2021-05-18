@@ -96,7 +96,6 @@ public class WxApiController {
                         access_token,
                         openid
                 );
-                //发送请求
                 String userInfo = HttpClientUtils.get(userInfoUrl);
                 //获取返回userinfo字符串扫描人信息
                 HashMap userInfoMap = gson.fromJson(userInfo, HashMap.class);
