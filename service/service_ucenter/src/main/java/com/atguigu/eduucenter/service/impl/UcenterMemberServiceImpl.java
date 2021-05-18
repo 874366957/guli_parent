@@ -72,9 +72,19 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
             throw new GuliException(20001,"注册失败");
         }
         UcenterMember ucenterMember=new UcenterMember();
+        String encrypt = MD5.encrypt(registerVo.getPassword());
+        registerVo.setPassword(encrypt);
         BeanUtils.copyProperties(registerVo,ucenterMember);
         ucenterMember.setIsDisabled(false);
         ucenterMember.setAvatar("https://edu-guli1010-1.oss-cn-beijing.aliyuncs.com/coursetemplate/default.jpg");
         baseMapper.insert(ucenterMember);
+    }
+
+    @Override
+    public UcenterMember getByOpenId(String openid) {
+        QueryWrapper<UcenterMember> wrapper=new QueryWrapper<>();
+        wrapper.eq("openid",openid);
+        UcenterMember member=baseMapper.selectOne(wrapper);
+        return member;
     }
 }
