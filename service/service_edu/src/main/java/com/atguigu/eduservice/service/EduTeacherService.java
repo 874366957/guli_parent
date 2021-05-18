@@ -2,6 +2,7 @@ package com.atguigu.eduservice.service;
 
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.entity.vo.TeacherQuery;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.Map;
@@ -18,4 +19,6 @@ public interface EduTeacherService extends IService<EduTeacher> {
     Map teacherListMap(long current, long limit);
 
     Map teacherConditionListMap(long current, long limit, TeacherQuery teacherQuery);
+
+    Map<String,Object> getFrontList(Page<EduTeacher> pageTeacher);
 }

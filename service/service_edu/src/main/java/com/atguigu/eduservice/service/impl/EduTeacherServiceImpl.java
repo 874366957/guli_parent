@@ -7,6 +7,7 @@ import com.atguigu.eduservice.entity.vo.TeacherQuery;
 import com.atguigu.eduservice.mapper.EduTeacherMapper;
 import com.atguigu.eduservice.service.EduTeacherService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +42,6 @@ public class EduTeacherServiceImpl extends ServiceImpl<EduTeacherMapper, EduTeac
         Map map = new HashMap<>();
         map.put("total", total);
         map.put("rows", records);
-
         return map;
     }
 
@@ -78,6 +78,29 @@ public class EduTeacherServiceImpl extends ServiceImpl<EduTeacherMapper, EduTeac
         map.put("total", total);
         map.put("rows", records);
 
+        return map;
+    }
+
+    @Override
+    public Map<String,Object> getFrontList(Page<EduTeacher> pageTeacher) {
+        QueryWrapper<EduTeacher> wrapper=new QueryWrapper<>();
+        wrapper.orderByDesc("id");
+        baseMapper.selectPage(pageTeacher, wrapper);
+        List<EduTeacher> list=pageTeacher.getRecords();
+        long current=pageTeacher.getCurrent();
+        long total = pageTeacher.getTotal();
+        long size = pageTeacher.getSize();
+        long pages = pageTeacher.getPages();
+        boolean hasNext = pageTeacher.hasNext();
+        boolean hasPrevious = pageTeacher.hasPrevious();
+        Map<String,Object> map=new HashMap<>();
+        map.put("items",list);
+        map.put("current",current);
+        map.put("pages",pages);
+        map.put("size",size);
+        map.put("total",total);
+        map.put("hasNext",hasNext);
+        map.put("hasPrevious",hasPrevious);
         return map;
     }
 }
