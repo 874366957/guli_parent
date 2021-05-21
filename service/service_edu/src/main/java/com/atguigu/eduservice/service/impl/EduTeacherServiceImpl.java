@@ -80,27 +80,4 @@ public class EduTeacherServiceImpl extends ServiceImpl<EduTeacherMapper, EduTeac
 
         return map;
     }
-
-    @Override
-    public Map<String,Object> getFrontList(Page<EduTeacher> pageTeacher) {
-        QueryWrapper<EduTeacher> wrapper=new QueryWrapper<>();
-        wrapper.orderByDesc("id");
-        baseMapper.selectPage(pageTeacher, wrapper);
-        List<EduTeacher> list=pageTeacher.getRecords();
-        long current=pageTeacher.getCurrent();
-        long total = pageTeacher.getTotal();
-        long size = pageTeacher.getSize();
-        long pages = pageTeacher.getPages();
-        boolean hasNext = pageTeacher.hasNext();
-        boolean hasPrevious = pageTeacher.hasPrevious();
-        Map<String,Object> map=new HashMap<>();
-        map.put("items",list);
-        map.put("current",current);
-        map.put("pages",pages);
-        map.put("size",size);
-        map.put("total",total);
-        map.put("hasNext",hasNext);
-        map.put("hasPrevious",hasPrevious);
-        return map;
-    }
 }

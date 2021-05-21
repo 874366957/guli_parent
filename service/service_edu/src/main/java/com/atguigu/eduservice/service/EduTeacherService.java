@@ -20,5 +20,4 @@ public interface EduTeacherService extends IService<EduTeacher> {
 
     Map teacherConditionListMap(long current, long limit, TeacherQuery teacherQuery);
 
-    Map<String,Object> getFrontList(Page<EduTeacher> pageTeacher);
 }

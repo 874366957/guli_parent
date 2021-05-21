@@ -159,4 +159,12 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
         return map;
     }
+
+    @Override
+    public List<EduCourse> getByTeacherId(String id) {
+        QueryWrapper<EduCourse> wrapper=new QueryWrapper<>();
+        wrapper.eq("teacher_id",id);
+        List<EduCourse> list = eduCourseService.list(wrapper);
+        return list;
+    }
 }

@@ -6,6 +6,7 @@ import com.atguigu.eduservice.entity.vo.CoursePublishVo;
 import com.atguigu.eduservice.entity.vo.CourseQuery;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -31,4 +32,6 @@ public interface EduCourseService extends IService<EduCourse> {
     Map pageCourse(long current, long limit);
 
     Map pageCourseCondition(long current, long limit, CourseQuery courseQuery);
+
+    List<EduCourse> getByTeacherId(String id);
 }
