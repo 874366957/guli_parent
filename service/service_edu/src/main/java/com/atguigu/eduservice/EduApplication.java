@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableDiscoveryClient
 @EnableFeignClients
-@ComponentScan(basePackages = {"com.atguigu","com.atguigu.eduservice.front"})
+@ComponentScan(basePackages = {"com.atguigu"})
 public class EduApplication {
     public static void main(String[] args) {
         SpringApplication.run(EduApplication.class);

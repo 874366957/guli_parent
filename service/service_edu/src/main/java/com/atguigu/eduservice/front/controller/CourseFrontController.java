@@ -35,6 +35,6 @@ public class CourseFrontController {
     public R getFrontCourseInfo(@PathVariable String courseId){
         CourseWebVo courseWebVo=courseService.getBaseCourseInfo(courseId);
         List<ChapterVo> courseList = chapterService.getChapterVideoByCourseId(courseId);
-        return R.ok().data("courseWebVo",courseWebVo).data("courseList",courseList);
+        return R.ok().data("courseWebVo",courseWebVo).data("chapterList",courseList);
     }
 }
