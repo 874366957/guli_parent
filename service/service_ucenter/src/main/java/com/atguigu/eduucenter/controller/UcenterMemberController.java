@@ -6,6 +6,7 @@ import com.atguigu.commonutils.R;
 import com.atguigu.eduucenter.entity.UcenterMember;
 import com.atguigu.eduucenter.entity.vo.RegisterVo;
 import com.atguigu.eduucenter.service.UcenterMemberService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,5 +46,6 @@ public class UcenterMemberController {
         return R.ok().data("userInfo",member);
 
     }
+
 }
 
