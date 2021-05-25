@@ -1,6 +1,6 @@
-package com.atguigu.educms.mapper;
+package com.atguigu.eduservice.mapper;
 
-import com.atguigu.educms.entity.CrmBanner;
+import com.atguigu.eduservice.banner.entity.CrmBanner;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

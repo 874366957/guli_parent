@@ -1,8 +1,8 @@
-package com.atguigu.educms.service.impl;
+package com.atguigu.eduservice.banner.service.impl;
 
-import com.atguigu.educms.entity.CrmBanner;
-import com.atguigu.educms.mapper.CrmBannerMapper;
-import com.atguigu.educms.service.BannerAdminService;
+import com.atguigu.eduservice.banner.entity.CrmBanner;
+import com.atguigu.eduservice.mapper.CrmBannerMapper;
+import com.atguigu.eduservice.banner.service.BannerAdminService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;

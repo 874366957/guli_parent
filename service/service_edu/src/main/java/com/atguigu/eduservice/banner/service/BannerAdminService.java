@@ -1,6 +1,6 @@
-package com.atguigu.educms.service;
+package com.atguigu.eduservice.banner.service;
 
-import com.atguigu.educms.entity.CrmBanner;
+import com.atguigu.eduservice.banner.entity.CrmBanner;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.Map;

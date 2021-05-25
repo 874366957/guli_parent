@@ -27,6 +27,7 @@ public class EduCommentServiceImpl extends ServiceImpl<EduCommentMapper, EduComm
     public Map<String, Object> getIndex(Page<EduComment> pageParam, String courseId) {
         QueryWrapper<EduComment> wrapper=new QueryWrapper<>();
         wrapper.eq("course_id",courseId);
+        wrapper.orderByDesc("gmt_create");
         baseMapper.selectPage(pageParam,wrapper);
         List<EduComment> list=pageParam.getRecords();
 

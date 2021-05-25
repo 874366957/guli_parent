@@ -1,12 +1,11 @@
-package com.atguigu.educms.controller;
+package com.atguigu.eduservice.banner.controller;
 
 
 import com.atguigu.commonutils.R;
-import com.atguigu.educms.entity.CrmBanner;
-import com.atguigu.educms.service.BannerAdminService;
+import com.atguigu.eduservice.banner.entity.CrmBanner;
+import com.atguigu.eduservice.banner.service.BannerAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -21,7 +20,7 @@ import java.util.Map;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/educms/adminbanner")
+@RequestMapping("/eduservice/adminbanner")
 public class BannerAdminController {
     @Autowired
     private BannerAdminService bannerAdminService;

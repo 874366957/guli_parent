@@ -53,6 +53,7 @@ public class CourseFrontServiceImpl extends ServiceImpl<FrontCourseMapper, EduCo
         map.put("current",current);
         map.put("pages",pages);
         map.put("size",size);
+
         map.put("total",total);
         map.put("hasNext",hasNext);
         map.put("hasPrevious",hasPrevious);
