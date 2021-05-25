@@ -1,6 +1,6 @@
 package com.atguigu.eduservice.front.service.impl;
 
-import com.atguigu.eduservice.entity.EduCourse;
+import com.atguigu.eduservice.base.entity.EduCourse;
 import com.atguigu.eduservice.front.entity.CourseFrontVo;
 import com.atguigu.eduservice.front.entity.CourseWebVo;
 import com.atguigu.eduservice.front.service.CourseFrontService;

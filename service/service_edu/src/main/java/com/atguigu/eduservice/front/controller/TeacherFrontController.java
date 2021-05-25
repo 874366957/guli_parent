@@ -1,11 +1,10 @@
 package com.atguigu.eduservice.front.controller;
 
 import com.atguigu.commonutils.R;
-import com.atguigu.eduservice.entity.EduCourse;
-import com.atguigu.eduservice.entity.EduTeacher;
+import com.atguigu.eduservice.base.entity.EduCourse;
+import com.atguigu.eduservice.base.entity.EduTeacher;
 import com.atguigu.eduservice.front.service.TeacherFrontService;
-import com.atguigu.eduservice.service.EduCourseService;
-import com.atguigu.eduservice.service.EduTeacherService;
+import com.atguigu.eduservice.base.service.EduCourseService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

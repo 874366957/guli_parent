@@ -1,8 +1,7 @@
 package com.atguigu.eduservice.mapper;
 
-import com.atguigu.eduservice.entity.EduCourse;
-import com.atguigu.eduservice.entity.vo.CourseInfoVo;
-import com.atguigu.eduservice.entity.vo.CoursePublishVo;
+import com.atguigu.eduservice.base.entity.EduCourse;
+import com.atguigu.eduservice.base.entity.vo.CoursePublishVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

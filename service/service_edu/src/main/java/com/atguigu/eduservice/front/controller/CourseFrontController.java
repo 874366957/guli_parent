@@ -1,21 +1,16 @@
 package com.atguigu.eduservice.front.controller;
 
-import com.atguigu.commonutils.JwtUtils;
 import com.atguigu.commonutils.R;
-import com.atguigu.eduservice.entity.EduCourse;
-import com.atguigu.eduservice.entity.chapter.ChapterVo;
+import com.atguigu.eduservice.base.entity.EduCourse;
+import com.atguigu.eduservice.base.entity.chapter.ChapterVo;
 import com.atguigu.eduservice.front.entity.CourseFrontVo;
 import com.atguigu.eduservice.front.entity.CourseWebVo;
-import com.atguigu.eduservice.front.entity.EduComment;
 import com.atguigu.eduservice.front.service.CourseFrontService;
-import com.atguigu.eduservice.service.EduChapterService;
-import com.atguigu.eduservice.service.EduCourseService;
+import com.atguigu.eduservice.base.service.EduChapterService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 

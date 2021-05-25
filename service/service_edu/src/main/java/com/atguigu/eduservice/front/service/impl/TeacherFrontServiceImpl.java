@@ -1,6 +1,6 @@
 package com.atguigu.eduservice.front.service.impl;
 
-import com.atguigu.eduservice.entity.EduTeacher;
+import com.atguigu.eduservice.base.entity.EduTeacher;
 import com.atguigu.eduservice.front.service.TeacherFrontService;
 import com.atguigu.eduservice.mapper.FrontTeacherMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

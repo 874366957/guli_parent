@@ -1,7 +1,7 @@
 package com.atguigu.eduservice.banner.service;
 
 import com.atguigu.eduservice.banner.entity.CrmBanner;
-import com.atguigu.eduservice.entity.EduTeacher;
+import com.atguigu.eduservice.base.entity.EduTeacher;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
