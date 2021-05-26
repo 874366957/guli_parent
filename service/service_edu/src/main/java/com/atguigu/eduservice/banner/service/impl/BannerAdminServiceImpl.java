@@ -1,7 +1,7 @@
 package com.atguigu.eduservice.banner.service.impl;
 
 import com.atguigu.eduservice.banner.entity.CrmBanner;
-import com.atguigu.eduservice.mapper.CrmBannerMapper;
+import com.atguigu.eduservice.banner.mapper.CrmBannerMapper;
 import com.atguigu.eduservice.banner.service.BannerAdminService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

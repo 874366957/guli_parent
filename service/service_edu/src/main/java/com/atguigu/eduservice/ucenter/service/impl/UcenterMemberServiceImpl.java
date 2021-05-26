@@ -4,7 +4,7 @@ import com.atguigu.commonutils.JwtUtils;
 import com.atguigu.commonutils.MD5;
 import com.atguigu.eduservice.ucenter.entity.UcenterMember;
 import com.atguigu.eduservice.ucenter.entity.vo.RegisterVo;
-import com.atguigu.eduservice.mapper.UcenterMemberMapper;
+import com.atguigu.eduservice.ucenter.mapper.UcenterMemberMapper;
 import com.atguigu.eduservice.ucenter.service.UcenterMemberService;
 import com.atguigu.servicebase.exceptionhandler.GuliException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

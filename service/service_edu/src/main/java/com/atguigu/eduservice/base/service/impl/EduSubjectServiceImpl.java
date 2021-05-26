@@ -6,7 +6,7 @@ import com.atguigu.eduservice.base.entity.excel.SubjectData;
 import com.atguigu.eduservice.base.entity.subject.FirstSubject;
 import com.atguigu.eduservice.base.entity.subject.SecondSubject;
 import com.atguigu.eduservice.base.listener.SubjectExcelListener;
-import com.atguigu.eduservice.mapper.EduSubjectMapper;
+import com.atguigu.eduservice.base.mapper.EduSubjectMapper;
 import com.atguigu.eduservice.base.service.EduSubjectService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

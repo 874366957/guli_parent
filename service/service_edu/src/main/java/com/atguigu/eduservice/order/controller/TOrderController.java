@@ -3,6 +3,7 @@ package com.atguigu.eduservice.order.controller;
 
 import com.atguigu.commonutils.JwtUtils;
 import com.atguigu.commonutils.R;
+import com.atguigu.eduservice.order.entity.TOrder;
 import com.atguigu.eduservice.order.service.TOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,10 +25,19 @@ public class TOrderController {
     @Autowired
     private TOrderService orderService;
 
-    @PostMapping("create/{courseId}")
+    @GetMapping("create/{courseId}")
     public R saveOrder(@PathVariable String courseId, HttpServletRequest request){
-        orderService.createOrder(courseId, JwtUtils.getMemberIdByJwtToken(request));
-        return R.ok();
+        if(request==null){
+            return R.error().code(28004);
+        }
+        String orderNo=orderService.createOrder(courseId, JwtUtils.getMemberIdByJwtToken(request));
+        return R.ok().data("orderId",orderNo);
+    }
+
+    @GetMapping("getOrderInfo/{orderId}")
+    public R getOrderInfo(@PathVariable String orderId){
+        TOrder orderInfo = orderService.getOrderInfo(orderId);
+        return R.ok().data("item",orderInfo);
     }
 
 }

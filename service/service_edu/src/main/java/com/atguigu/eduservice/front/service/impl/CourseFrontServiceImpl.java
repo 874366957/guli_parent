@@ -4,7 +4,7 @@ import com.atguigu.eduservice.base.entity.EduCourse;
 import com.atguigu.eduservice.front.entity.CourseFrontVo;
 import com.atguigu.eduservice.front.entity.CourseWebVo;
 import com.atguigu.eduservice.front.service.CourseFrontService;
-import com.atguigu.eduservice.mapper.FrontCourseMapper;
+import com.atguigu.eduservice.front.mapper.FrontCourseMapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

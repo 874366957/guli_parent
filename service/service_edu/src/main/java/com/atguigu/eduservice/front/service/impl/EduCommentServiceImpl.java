@@ -1,7 +1,7 @@
 package com.atguigu.eduservice.front.service.impl;
 
 import com.atguigu.eduservice.front.entity.EduComment;
-import com.atguigu.eduservice.mapper.EduCommentMapper;
+import com.atguigu.eduservice.front.mapper.EduCommentMapper;
 import com.atguigu.eduservice.front.service.EduCommentService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

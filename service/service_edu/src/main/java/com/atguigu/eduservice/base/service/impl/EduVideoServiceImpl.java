@@ -3,7 +3,7 @@ package com.atguigu.eduservice.base.service.impl;
 import com.atguigu.commonutils.R;
 import com.atguigu.eduservice.base.client.VodClient;
 import com.atguigu.eduservice.base.entity.EduVideo;
-import com.atguigu.eduservice.mapper.EduVideoMapper;
+import com.atguigu.eduservice.base.mapper.EduVideoMapper;
 import com.atguigu.eduservice.base.service.EduVideoService;
 import com.atguigu.servicebase.exceptionhandler.GuliException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

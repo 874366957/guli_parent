@@ -1,7 +1,7 @@
 package com.atguigu.eduservice.banner.service.impl;
 
 import com.atguigu.eduservice.banner.entity.CrmBanner;
-import com.atguigu.eduservice.mapper.CrmBannerMapper;
+import com.atguigu.eduservice.banner.mapper.CrmBannerMapper;
 import com.atguigu.eduservice.banner.service.BannerFrontService;
 import com.atguigu.eduservice.base.entity.EduCourse;
 import com.atguigu.eduservice.base.entity.EduTeacher;

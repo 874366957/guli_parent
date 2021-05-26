@@ -5,7 +5,7 @@ import com.atguigu.eduservice.base.entity.EduCourseDescription;
 import com.atguigu.eduservice.base.entity.vo.CourseInfoVo;
 import com.atguigu.eduservice.base.entity.vo.CoursePublishVo;
 import com.atguigu.eduservice.base.entity.vo.CourseQuery;
-import com.atguigu.eduservice.mapper.EduCourseMapper;
+import com.atguigu.eduservice.base.mapper.EduCourseMapper;
 import com.atguigu.eduservice.base.service.EduChapterService;
 import com.atguigu.eduservice.base.service.EduCourseDescriptionService;
 import com.atguigu.eduservice.base.service.EduCourseService;

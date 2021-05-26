@@ -4,7 +4,7 @@ import com.atguigu.eduservice.base.entity.EduChapter;
 import com.atguigu.eduservice.base.entity.EduVideo;
 import com.atguigu.eduservice.base.entity.chapter.ChapterVo;
 import com.atguigu.eduservice.base.entity.chapter.VideoVo;
-import com.atguigu.eduservice.mapper.EduChapterMapper;
+import com.atguigu.eduservice.base.mapper.EduChapterMapper;
 import com.atguigu.eduservice.base.service.EduChapterService;
 import com.atguigu.eduservice.base.service.EduVideoService;
 import com.atguigu.servicebase.exceptionhandler.GuliException;
